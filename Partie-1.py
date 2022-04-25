@@ -21,7 +21,7 @@ def TRIreduite(A):
 A = np.array([[2,3,0,0],[4,5,6,0],[0,7,8,9],[0,0,10,11]])
 TRIreduite(A)
 
-#Nôtre fonction TRIreduite a pour but de de construire une matrice de forme réduite d’une matrice tridiagonale quelconque.
+#Nôtre fonction TRIreduite a pour but de construire une matrice de forme réduite d’une matrice tridiagonale quelconque.
 
 def TRIcomplete(Atd):
     D1 = Atd.T[0]  #Prend le vecteur 0 de la matrice transposé Atd
