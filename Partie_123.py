@@ -1,9 +1,5 @@
 "PARTIE 1: STOCKAGE DES MATRICES TRIDIAGONALES"
 
-# Q1 : On remarque que la matrice A est de taille n² tandis que la matrice Â est de taille 3*n. La matrice Â est donc la plus petite en termes de stockage.
-
-#Q2 : 
-
 import numpy as  np
 
 def TRIreduite(A):
@@ -35,8 +31,6 @@ def TRIcomplete(Atd):
 B = np.array([[0,2,3],[4,5,6],[7,8,9],[10,11,0]])
 TRIcomplete(B)
 
-
-#Q3 :
 
 def produitTRIvect(Atd,X):
     S = np.array(0)
@@ -105,14 +99,14 @@ import numpy as  np
 #Question 1 
 
 def TriLUResol(M,b):
-    Mcomp = TRIComplete(M)
+    Mcomp = TRIcomplete(M)
     n,m = Mcomp.shape
     #On résout Ly = b 
     y = b[0]
     for i in range(1,n):
         s = b[i]-M[i][0]*y[i-1]
         y = np.append(y,s)
-    #On a maintenant y et maintenat on résout Ux = y
+    #On a maintenant y et maintenant on résout Ux = y
     x = np.zeros(n-1)
     xn =y[n-1]/M[n-1][1]
     x = np.insert(x,n-1,xn) # Ajoute aux vecteur x sa dernière composante 
